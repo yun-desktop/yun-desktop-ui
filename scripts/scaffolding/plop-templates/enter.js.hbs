@@ -1,0 +1,13 @@
+{{#each componentNameList}}
+import {{this.yCamelName}} from "./components/{{this.name}}/index.js";
+{{/each}}
+
+{{#each componentNameList}}
+export const {{this.camelName}} = {{this.yCamelName}}
+{{/each}}
+
+export default {
+{{#each componentNameList}}
+  {{this.camelName}},
+{{/each}}
+}
